@@ -68,6 +68,7 @@
     background-color: hsl(206, 94%, 87%);
     color:black;
 }
+
 .sidebar1text{
     margin-left: 20px;
 }
@@ -137,7 +138,25 @@
     font-weight: 400;
     font-size: 15px;
     color: hsl(213, 96%, 18%);
-}
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+} 
+.forminput.error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.25); /* red glow */
+  }
+  
+  .error-text {
+    color: #e74c3c;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    margin-left: 350px;
+    display: block;
+  }
+  
 .forminput:focus{
     outline: none;
     border-color: hsl(206, 94%, 87%);
@@ -154,7 +173,11 @@
     font-size: 15px;
     padding: 10px 20px;
     border-radius: 10px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 350px;
     cursor: pointer;
+}
+.nextstep:hover{
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
 }
