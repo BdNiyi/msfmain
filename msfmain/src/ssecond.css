@@ -1,0 +1,90 @@
+
+
+
+
+
+
+.plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: -10px;
+    padding: 20px 30px 15px 1px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.plan1{
+border: 1px solid hsl(231, 11%, 63%);
+padding: 20px 30px 15px 15px;
+width: 80px;
+height: 100px;
+border-radius: 5px;
+}
+.plan2{
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 20px 30px 15px 15px;
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+}
+.plan3{
+    border: 1px solid hsl(231, 11%, 63%);
+    padding: 20px 30px 15px 15px;
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.planimg{
+    scale:0.8;
+    margin-left: -6px;
+}
+.planname{
+    margin-top: 25px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: hsl(213, 96%, 18%);
+
+}
+.planprice{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    color: hsl(231, 11%, 63%);
+    font-size: 13px;
+}
+.toggle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50px;
+    padding-top: 12px;
+    margin-top: 20px;
+    background-color: hsla(240, 10%, 86%, 0.438);
+    border: 1px solid hsla(240, 10%, 86%, 0.438);
+    border-radius: 10px;
+    width: 440px;
+    height: 30px;
+}
+.toggle1{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: hsl(213, 96%, 18%);
+}
+.toggle2{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: hsl(213, 96%, 18%);
+}
+
+
+
+
+
+
+
+
