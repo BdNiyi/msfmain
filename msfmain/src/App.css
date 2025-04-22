@@ -1,4 +1,5 @@
 .App{
-  background-color:  hsl(217, 100%, 97%);
-  min-height: 100vh;
+  background-color:  rgb(222, 233, 250);
+  min-height: 200vh;
+  padding-top:20px;
   }

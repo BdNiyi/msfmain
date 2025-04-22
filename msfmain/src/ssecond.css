@@ -55,11 +55,18 @@ border-radius: 5px;
     color: hsl(231, 11%, 63%);
     font-size: 13px;
 }
+
+  .active-plan {
+    border: 2px solid #174a89;
+    background-color: #f0f6ff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
 .toggle{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 50px;
     padding-top: 12px;
     margin-top: 20px;
     background-color: hsla(240, 10%, 86%, 0.438);
@@ -72,16 +79,21 @@ border-radius: 5px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-size: 13px;
-    color: hsl(213, 96%, 18%);
 }
 .toggle2{
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-size: 13px;
-    color: hsl(213, 96%, 18%);
 }
-
-
+.realtog{
+    color:hsl(213, 96%, 18%);
+    margin-top: -10px;
+}
+.active-toggle {
+    color: hsl(213, 96%, 18%);
+    font-weight: bold;  
+  }
+ 
 
 
 
