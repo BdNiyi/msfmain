@@ -2,7 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import './ffirst.css';
 
-function First() {
+
+function First({ goToNext }) {
+  // ...
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -38,50 +40,16 @@ function First() {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
+      goToNext();
       // proceed to next step
       console.log('Form data:', form);
-      alert(`Submitted: ${JSON.stringify(form)}`);
+      //alert(`Submitted: ${JSON.stringify(form)}`);
     }
   };
 
   return (
-    <div className='firstpagebody'>
-        {/* Sidebar start */}
-<div className='sidebar'>
 
-<div className='sidebar1'>
-    <div className='sidenum'>1</div>
-    <div className='sidebar1text'>
-    <div className='stepnum'>Step 1</div>
-    <div className='stepdesc'>Your info</div>
-    </div>
-</div>
-<div className='sidebar2'>
-    <div className='sidenum'>2</div>
-    <div className='sidebar2text'>
-<div className='stepnum'>Step 2</div>
-<div className='stepdesc'>Select plan</div>
-</div>
-</div>
-<div className='sidebar3'> 
-    <div className='sidenum'>3</div>
-    <div className='sidebar3text'>
-    <div className='stepnum'>Step 3</div> 
-    <div className='stepdesc'>Add-ons</div>
-    </div>
-</div>
-<div className='sidebar4'> 
-    <div className='sidenum'>4</div>
-    <div className='sidebar4text'>
-<div className='stepnum'>Step 4</div> 
-<div className='stepdesc'>Summary</div>
-</div>
- </div>
-</div>
 
- {/* Sidebar end */} 
-
-{/* Step 1 start */} 
 <div className='Personalinfo'>
 <div className='pihead'>Personal info</div>
 <p className='pip'>Please provide your name, email address, and phone number.</p>
@@ -119,11 +87,10 @@ function First() {
               onChange={handleChange}/>
               {errors.phone && <span className='error-text'>{errors.phone}</span>}
     </div>
-    <button type='submit' className='nextstep'>Next Step</button>
+    <button type='submit' className='nextstep'  onClick={goToNext}>Next Step</button>
 </form>
 
 </div>
-    </div>
   )
 }
 

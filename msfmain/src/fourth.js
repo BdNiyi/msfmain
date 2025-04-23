@@ -27,8 +27,8 @@ function Second({ goBack, goToNext }) {
   return (
 
       <div className='Personalinfo'>
-        <div className='pihead'>Select your plan</div>
-        <p className='pip'>You have the option of monthly or yearly billing.</p>
+        <div className='pihead'>Pick add-ons</div>
+        <p className='pip'>Add-ons help enhance your gaming experience.</p>
 
         <div className='plan'>
         <div

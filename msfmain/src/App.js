@@ -1,14 +1,12 @@
-import First from './first';
-import Second from './second';
 import './App.css';
 import { PlanProvider } from './PlanContext';
+import MultiStepForm from './MultiStepForm';
 
 function App() {
   return (
     <div className="App">
     <PlanProvider>
-      <First />
-      <Second />
+    <MultiStepForm/>
     </PlanProvider>
     </div>
   );

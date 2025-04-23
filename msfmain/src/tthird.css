@@ -1,0 +1,28 @@
+.Adds{
+    display:block;
+}
+.Add1{
+    display:flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+#add1{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+.addp{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: hsl(231, 11%, 63%);
+    margin-top: 10px; 
+}
+.addprice{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: hsl(231, 11%, 63%);
+    margin-top: 10px; 
+}

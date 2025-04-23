@@ -19,21 +19,21 @@
 border: 1px solid hsl(231, 11%, 63%);
 padding: 20px 30px 15px 15px;
 width: 80px;
-height: 100px;
+height: 120px;
 border-radius: 5px;
 }
 .plan2{
     border: 1px solid hsl(231, 11%, 63%);
     padding: 20px 30px 15px 15px;
     width: 80px;
-    height: 100px;
+    height: 120px;
     border-radius: 5px;
 }
 .plan3{
     border: 1px solid hsl(231, 11%, 63%);
     padding: 20px 30px 15px 15px;
     width: 80px;
-    height: 100px;
+    height: 120px;
     border-radius: 5px;
 }
 
@@ -42,7 +42,7 @@ border-radius: 5px;
     margin-left: -6px;
 }
 .planname{
-    margin-top: 25px;
+    margin-top: 30px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-size: 15px;
@@ -62,15 +62,25 @@ border-radius: 5px;
     border-radius: 8px;
     transition: all 0.3s ease;
   }
+  .free-label {
+    color: hsl(213, 96%, 18%);
+    font-family:"Ubuntu", sans-serif;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    font-weight: 500;
+  }
   
+
 .toggle{
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-top: 12px;
     margin-top: 20px;
-    background-color: hsla(240, 10%, 86%, 0.438);
-    border: 1px solid hsla(240, 10%, 86%, 0.438);
+    margin-right: 40px;
+    color: hsl(240, 2%, 59%);
+    background-color: hsla(240, 10%, 86%, 0.192);
+    border: 1px solid transparent;
     border-radius: 10px;
     width: 440px;
     height: 30px;
@@ -94,9 +104,54 @@ border-radius: 5px;
     font-weight: bold;  
   }
  
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 12px;
+    margin-top: 50px;
+    margin-right: 40px;
+    width: 440px;
+    height: 30px;
+}
 
 
-
-
+.nextstep2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    width: 110px;
+    height: 40px;
+    margin-top: -12px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nextstep2:hover{
+    background-color: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
+}
+.goback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    background-color: white;
+    color: hsl(240, 2%, 59%);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    width: 110px;
+    height: 40px;
+    margin-top: -12px;
+    margin-left: -10px;
+    cursor: pointer;
+}
 
 
