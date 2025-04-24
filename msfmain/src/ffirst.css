@@ -172,7 +172,8 @@
     font-weight: 500;
     font-size: 15px;
     padding: 10px 20px;
-    border-radius: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
     margin-top: 20px;
     margin-left: 370px;
     cursor: pointer;

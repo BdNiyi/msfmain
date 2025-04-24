@@ -1,88 +1,66 @@
 import './ffirst.css';
 import './ssecond.css';
-import Arcade from './assets/images/icon-arcade.svg';
-import Advanced from './assets/images/icon-advanced.svg';
-import Pro from './assets/images/icon-pro.svg';
-import Switch from '@mui/material/Switch';
+import './ffourth.css';
 import { usePlan } from './PlanContext';
 
+function Fourth({ goBack }) {
+  const { selectedPlan, isYearly, selectedAddOns = {} } = usePlan();
 
-
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
-
-function Second({ goBack, goToNext }) {
-  const { isYearly, setIsYearly, selectedPlan, setSelectedPlan } = usePlan();
-
-  const handleToggle = () => {
-    setIsYearly(prev => !prev);
-  };
-
-  // Pricing based on mode
   const pricing = {
-    arcade: isYearly ? "$90/yr" : "$9/mo",
-    advanced: isYearly ? "$120/yr" : "$12/mo",
-    pro: isYearly ? "$150/yr" : "$15/mo"
+    Arcade: isYearly ? 90 : 9,
+    Advanced: isYearly ? 120 : 12,
+    Pro: isYearly ? 150 : 15,
   };
+
+  const addOnDetails = [
+    { name: "Online service", price: isYearly ? 10 : 1, selected: selectedAddOns.add1 },
+    { name: "Customizable Profile", price: isYearly ? 20 : 2, selected: selectedAddOns.add3 },
+    { name: "Larger Storage", price: isYearly ? 20 : 2, selected: selectedAddOns.add2 },
+  ];
+
+  const selectedAddOnsList = addOnDetails.filter(add => add.selected);
+
+  const planPrice = pricing[selectedPlan] || 0;
+  const addOnsPrice = selectedAddOnsList.reduce((sum, add) => sum + add.price, 0);
+  const total = planPrice + addOnsPrice;
+  const billingSuffix = isYearly ? "/yr" : "/mo";
+
+  console.log("Selected Addons from context:", selectedAddOns);
 
   return (
+    <div className='Personalinfo'>
+      <div className='pihead'>Finishing up</div>
+      <p className='pip'>Double-check everything looks OK before confirming.</p>
 
-      <div className='Personalinfo'>
-        <div className='pihead'>Pick add-ons</div>
-        <p className='pip'>Add-ons help enhance your gaming experience.</p>
-
-        <div className='plan'>
-        <div
-  className={`plan1 ${selectedPlan === 'Arcade' ? 'active-plan' : ''}`}
-  onClick={() => setSelectedPlan('Arcade')}
->
-  <img className='planimg' src={Arcade} alt='arcade' />
-  <div className='planname'>Arcade</div>
-  <div className='planprice'><span className='price-text'>{pricing.arcade}</span></div>
-  {isYearly && <div className='free-label'>2 months free</div>}
-</div>
-
-<div
-  className={`plan2 ${selectedPlan === 'Advanced' ? 'active-plan' : ''}`}
-  onClick={() => setSelectedPlan('Advanced')}
->
-  <img className='planimg' src={Advanced} alt='advanced' />
-  <div className='planname'>Advanced</div>
-  <div className='planprice'><span className='price-text'>{pricing.advanced}</span></div>
-  {isYearly && <div className='free-label'>2 months free</div>}
-</div>
-
-<div
-  className={`plan3 ${selectedPlan === 'Pro' ? 'active-plan' : ''}`}
-  onClick={() => setSelectedPlan('Pro')}
->
-  <img className='planimg' src={Pro} alt='pro' />
-  <div className='planname'>Pro</div>
-  <div className='planprice'><span className='price-text'>{pricing.pro}</span></div>
-  {isYearly && <div className='free-label'>2 months free</div>}
-</div>
-
+      <div className='Summary'>
+        <div className='summarybody'>
+          <div className='summaryH'>
+            <div className='summaryhead'>{selectedPlan} ({isYearly ? "Yearly" : "Monthly"})</div>
+            <div className='summarytext'>Change</div>
+          </div>
+          <div className='summaryprice'>${planPrice}{billingSuffix}</div>
         </div>
+        <hr className='summline' />
 
-        <div className='toggle'>
-          <div className={`toggle1 ${!isYearly ? 'active-toggle' : ''}`}>Monthly</div>
-          <Switch {...label} className='realtog' checked={isYearly} onChange={handleToggle}
-  sx={{
-    '& .MuiSwitch-switchBase.Mui-checked': {
-      color: '#02295a',
-    },
-    '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-      backgroundColor: '#02295a',
-    },
-  }}
-/>
+        {selectedAddOnsList.map((add, idx) => (
+          <div className='summarychoice1' key={idx}>
+            <div className='summarychoiceA'>{add.name}</div>
+            <div className='summarychoiceprice'>+${add.price}/{isYearly ? "yr" : "mo"}</div>
+          </div>
+        ))}
+      </div>
 
-          <div className={`toggle2 ${isYearly ? 'active-toggle' : ''}`}>Yearly</div>
-        </div>
+      <div className='total'>
+        <div className='tots'>Total (per {isYearly ? "year" : "month"})</div>
+        <div className='totalprice'>${total}/{isYearly ? "yr" : "mo"}</div>
+      </div>
+
       <div className='button'>
         <button className='goback' onClick={goBack}>Go Back</button>
-        <button type='submit' className='nextstep2' onClick={goToNext}>Next Step</button></div>
+        <button type='submit' className='nextstep3'>Confirm</button>
       </div>
+    </div>
   );
 }
 
-export default Second;
+export default Fourth;

@@ -80,7 +80,16 @@ function Second({ goBack, goToNext }) {
         </div>
       <div className='button'>
         <button className='goback' onClick={goBack}>Go Back</button>
-        <button type='submit' className='nextstep2' onClick={goToNext}>Next Step</button></div>
+        <button
+  type='submit'
+  className='nextstep2'
+  onClick={goToNext}
+  disabled={!selectedPlan}
+>
+  Next Step
+</button>
+
+        </div>
       </div>
   );
 }
