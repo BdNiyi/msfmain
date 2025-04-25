@@ -4,6 +4,7 @@ import First from './first';
 import Second from './second';
 import Third from './third';
 import Fourth from './fourth';
+import Fifth from './fifth';
 import './ffirst.css';
 
 function MultiStepForm() {
@@ -19,6 +20,9 @@ function MultiStepForm() {
         return <Third goBack={() => setCurrentStep(2)} goToNext={() => setCurrentStep(4)} />;
       case 4:
         return <Fourth goBack={() => setCurrentStep(3)} />;
+      case 5:
+        return <Fifth goBack={() => setCurrentStep(4)} />;
+      
       // Add more cases for Step 3 and Step 4
       default:
         return <First goToNext={() => setCurrentStep(2)} />;

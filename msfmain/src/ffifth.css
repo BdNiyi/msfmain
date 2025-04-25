@@ -1,0 +1,27 @@
+.thankyou {
+    text-align: center;
+    width: 50%;
+    padding-left: 100px;
+    align-content: center;
+  }
+  
+  .thankyou-icon {
+    width: 80px;
+    margin-left: -250px;
+  }
+  .thankyou-head {
+    font-size: 1.75rem;
+    color: hsl(213, 96%, 18%);
+    margin-left: -250px;
+    font-family: "Ubuntu", sans-serif;
+  }
+  
+  .thankyou-sub {
+    color: hsl(231, 11%, 63%);
+    line-height: 1.5;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    width: 76%;
+    margin-left: -80px;
+  }
+  

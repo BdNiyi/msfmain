@@ -1,11 +1,16 @@
+import { useState } from 'react';
 import './ffirst.css';
 import './ssecond.css';
 import './ffourth.css';
+import './ffifth.css';       // new styles for the thank-you page
+import  ThankYouIcon from './assets/images/icon-thank-you.svg'; // new icon for the thank-you page
 import { usePlan } from './PlanContext';
 
 function Fourth({ goBack }) {
   const { selectedPlan, isYearly, selectedAddOns = {} } = usePlan();
+  const [confirmed, setConfirmed] = useState(false);
 
+  // Pricing and add-on logic (unchanged)
   const pricing = {
     Arcade: isYearly ? 90 : 9,
     Advanced: isYearly ? 120 : 12,
@@ -19,14 +24,31 @@ function Fourth({ goBack }) {
   ];
 
   const selectedAddOnsList = addOnDetails.filter(add => add.selected);
-
   const planPrice = pricing[selectedPlan] || 0;
   const addOnsPrice = selectedAddOnsList.reduce((sum, add) => sum + add.price, 0);
   const total = planPrice + addOnsPrice;
   const billingSuffix = isYearly ? "/yr" : "/mo";
 
-  console.log("Selected Addons from context:", selectedAddOns);
+  // If confirmed, show the congratulatory page
+  if (confirmed) {
+    return (
+      <div className="thankyou">
+        <img
+          src= {ThankYouIcon}
+          alt="Thank you"
+          className="thankyou-icon"
+        />
+        <h2 className="thankyou-head">Thank you!</h2>
+        <p className="thankyou-sub">
+          Thanks for confirming your subscription!<br/>
+          We hope you have fun using {selectedPlan} ({isYearly ? "Yearly" : "Monthly"}). If you ever need support, please feel free 
+  to email us at support@loremgaming.com.
+        </p>
+      </div>
+    );
+  }
 
+  // Otherwise, show the regular summary
   return (
     <div className='Personalinfo'>
       <div className='pihead'>Finishing up</div>
@@ -35,29 +57,43 @@ function Fourth({ goBack }) {
       <div className='Summary'>
         <div className='summarybody'>
           <div className='summaryH'>
-            <div className='summaryhead'>{selectedPlan} ({isYearly ? "Yearly" : "Monthly"})</div>
-            <div className='summarytext'>Change</div>
+            <div className='summaryhead'>
+              {selectedPlan} ({isYearly ? "Yearly" : "Monthly"})
+            </div>
+            <div className='summarytext' onClick={goBack}>Change</div>
           </div>
-          <div className='summaryprice'>${planPrice}{billingSuffix}</div>
+          <div className='summaryprice'>
+            ${planPrice}{billingSuffix}
+          </div>
         </div>
         <hr className='summline' />
 
         {selectedAddOnsList.map((add, idx) => (
           <div className='summarychoice1' key={idx}>
             <div className='summarychoiceA'>{add.name}</div>
-            <div className='summarychoiceprice'>+${add.price}/{isYearly ? "yr" : "mo"}</div>
+            <div className='summarychoiceprice'>+${add.price}{billingSuffix}</div>
           </div>
         ))}
       </div>
 
       <div className='total'>
-        <div className='tots'>Total (per {isYearly ? "year" : "month"})</div>
-        <div className='totalprice'>${total}/{isYearly ? "yr" : "mo"}</div>
+        <div className='tots'>
+          Total (per {isYearly ? "year" : "month"})
+        </div>
+        <div className='totalprice'>
+          ${total}{billingSuffix}
+        </div>
       </div>
 
       <div className='button'>
         <button className='goback' onClick={goBack}>Go Back</button>
-        <button type='submit' className='nextstep3'>Confirm</button>
+        <button
+          type='button'
+          className='nextstep3'
+          onClick={() => setConfirmed(true)}
+        >
+          Confirm
+        </button>
       </div>
     </div>
   );
