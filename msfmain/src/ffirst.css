@@ -182,3 +182,202 @@
     background-color: hsl(206, 94%, 87%);
     color: hsl(213, 96%, 18%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media only screen
+and (min-width: 320px)
+and (max-width: 658px)
+ {
+    .firstpagebody{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 500px;
+        width: 850px;
+        margin:;
+        padding: 20px 20px 20px 50px;
+        border-radius: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 500;
+    }
+    .sidebar{
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 15px;
+        margin-left: -30px;
+        background-image: ;
+        background-position: center;
+        background-size: cover;
+        padding: 20px 20px 20px 20px;
+        width: 200px;
+        color:white
+    }
+    .sidebar1{
+        display: flex;
+        margin-top: 5px;
+    }
+    .sidebar2{
+        display: flex;
+        margin-top: 25px;
+    }
+    .sidebar3{
+        display: flex;
+        margin-top: 25px;
+    }
+    .sidebar4{
+        display: flex;
+        margin-top: 25px;
+    }
+    .sidenum{
+        font-size: 15px;
+        font-family: url('./assets/fonts/Ubuntu-Bold.ttf');
+        font-weight: bold;
+        border: 1px solid white;
+        border-radius: 500px;
+        text-align: center;
+         height: 15px;
+        width: 15px;
+       padding: 7px;
+    }
+    .sidenum:hover{
+        border-color:hsl(228, 100%, 84%);
+        background-color: hsl(206, 94%, 87%);
+        color:black
+    }
+    .sidenum:active{
+        border-color:hsl(228, 100%, 84%);
+        background-color: hsl(206, 94%, 87%);
+        color:black;
+    }
+    
+    .sidebar1text{
+        margin-left: 20px;
+    }
+    .sidebar2text{
+        margin-left: 20px;
+    }
+    .sidebar3text{
+        margin-left: 20px;
+    }
+    .sidebar4text{
+        margin-left: 20px;
+    }
+    .stepnum{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 11px;
+        color: hsl(231, 11%, 63%);
+    }
+    .stepdesc{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing:1px;
+        margin-top: 3px;
+    }
+    .Personalinfo{
+      display: block;
+      margin-right: 100px;
+      margin-top: 30px;
+    }
+    .pihead{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        color: hsl(213, 96%, 18%);
+    }
+    .pip{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        color: hsl(231, 11%, 63%);
+        margin-top: 10px;
+    }
+    
+    .forform{
+        margin-top: 50px;
+    }
+    .formgroup{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .formlabel{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        color: hsl(213, 96%, 18%);
+        margin-bottom: 5px;
+    }
+    .forminput{
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 10px;
+        padding: 10px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        color: hsl(213, 96%, 18%);
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    } 
+    .forminput.error {
+        border-color: #e74c3c;
+        box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.25); /* red glow */
+      }
+      
+      .error-text {
+        color: #e74c3c;
+        font-family: "Ubuntu", sans-serif;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        margin-left: 350px;
+        display: block;
+      }
+      
+    .forminput:focus{
+        outline: none;
+        border-color: hsl(206, 94%, 87%);
+        box-shadow: 0 0 5px hsl(206, 94%, 87%);
+    }
+    .nextstep{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(213, 96%, 18%);
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-left: 370px;
+        cursor: pointer;
+    }
+    .nextstep:hover{
+        background-color: hsl(206, 94%, 87%);
+        color: hsl(213, 96%, 18%);
+    }
+}
