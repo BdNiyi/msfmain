@@ -155,3 +155,112 @@ border-radius: 5px;
 }
 
 
+
+
+
+
+
+
+
+
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 658px)
+ {
+    .plan{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: -10px;
+        margin-top: -20px;
+        padding: 20px 30px 15px 1px;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+
+    .nextstep2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(213, 96%, 18%);
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 500;
+        font-size: 13px;
+        width: 110px;
+        height: 40px;
+        margin-top: 20px;
+        margin-right: 175px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .planbody{
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-top: -28px;
+    }
+    .plan1{
+        border: 1px solid hsl(231, 11%, 63%);
+        padding: 20px 30px 15px 15px;
+        width: 200px;
+        margin-left: 5px;
+        height: 30px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        }
+        .plan2{
+            border: 1px solid hsl(231, 11%, 63%);
+            padding: 20px 30px 15px 15px;
+            width: 200px;
+            margin-left: 5px;
+            margin-top: 10px;
+            height: 30px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            }
+            .plan3{
+                border: 1px solid hsl(231, 11%, 63%);
+                padding: 20px 30px 15px 15px;
+                width: 200px;
+                margin-left: 5px;
+                margin-top: 10px;
+                height: 30px;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: row;
+                }
+        .planimg{
+            scale:1;
+            margin-left: -6px;
+        }
+        .toggle{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 12px;
+            margin-top: -5px;
+            margin-left: -5px;
+            color: hsl(240, 2%, 59%);
+            background-color: hsla(240, 10%, 86%, 0.192);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            width: 250px;
+            height: 30px;
+        }
+        .free-label {
+            color: hsl(213, 96%, 18%);
+            font-family:"Ubuntu", sans-serif;
+            font-size: 0.65rem;
+            margin-top: 20px;
+            margin-left: 14px;
+            font-weight: 500;
+          }
+ } 

@@ -32,32 +32,47 @@ function Second({ goBack, goToNext }) {
 
         <div className='plan'>
         <div
-  className={`plan1 ${selectedPlan === 'Arcade' ? 'active-plan' : ''}`}
-  onClick={() => setSelectedPlan('Arcade')}
+  className={`plan1 ${selectedPlan?.name === 'Arcade' ? 'active-plan' : ''}`}
+  onClick={() => setSelectedPlan({
+    name: 'Arcade',
+    priceMonthly: 9,
+    priceYearly: 90
+  })}
 >
   <img className='planimg' src={Arcade} alt='arcade' />
+  <div className='planbody'>
   <div className='planname'>Arcade</div>
-  <div className='planprice'><span className='price-text'>{pricing.arcade}</span></div>
+  <div className='planprice'><span className='price-text'>{pricing.arcade}</span></div></div>
   {isYearly && <div className='free-label'>2 months free</div>}
 </div>
 
 <div
-  className={`plan2 ${selectedPlan === 'Advanced' ? 'active-plan' : ''}`}
-  onClick={() => setSelectedPlan('Advanced')}
+  className={`plan2 ${selectedPlan?.name === 'Advanced' ? 'active-plan' : ''}`}
+  onClick={() => setSelectedPlan({
+    name: 'Advanced',
+    priceMonthly: 12,
+    priceYearly: 120
+  })}
 >
   <img className='planimg' src={Advanced} alt='advanced' />
+  <div className='planbody'>
   <div className='planname'>Advanced</div>
-  <div className='planprice'><span className='price-text'>{pricing.advanced}</span></div>
+  <div className='planprice'><span className='price-text'>{pricing.advanced}</span></div></div>
   {isYearly && <div className='free-label'>2 months free</div>}
 </div>
 
 <div
-  className={`plan3 ${selectedPlan === 'Pro' ? 'active-plan' : ''}`}
-  onClick={() => setSelectedPlan('Pro')}
+  className={`plan3 ${selectedPlan?.name === 'Pro' ? 'active-plan' : ''}`}
+  onClick={() => setSelectedPlan({
+    name: 'Pro',
+    priceMonthly: 15,
+    priceYearly: 150
+  })}
 >
   <img className='planimg' src={Pro} alt='pro' />
+  <div  className='planbody'>
   <div className='planname'>Pro</div>
-  <div className='planprice'><span className='price-text'>{pricing.pro}</span></div>
+  <div className='planprice'><span className='price-text'>{pricing.pro}</span></div></div>
   {isYearly && <div className='free-label'>2 months free</div>}
 </div>
 

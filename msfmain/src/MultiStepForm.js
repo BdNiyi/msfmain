@@ -1,10 +1,8 @@
-// MultiStepForm.js
 import React, { useState } from 'react';
 import First from './first';
 import Second from './second';
 import Third from './third';
 import Fourth from './fourth';
-import Fifth from './fifth';
 import './ffirst.css';
 
 function MultiStepForm() {
@@ -16,14 +14,10 @@ function MultiStepForm() {
         return <First goToNext={() => setCurrentStep(2)} />;
       case 2:
         return <Second goBack={() => setCurrentStep(1)} goToNext={() => setCurrentStep(3)} />;
-        case 3:
+      case 3:
         return <Third goBack={() => setCurrentStep(2)} goToNext={() => setCurrentStep(4)} />;
       case 4:
-        return <Fourth goBack={() => setCurrentStep(3)} />;
-      case 5:
-        return <Fifth goBack={() => setCurrentStep(4)} />;
-      
-      // Add more cases for Step 3 and Step 4
+        return <Fourth goBack={() => setCurrentStep(3)} goToNext={() => setCurrentStep(5)} />;
       default:
         return <First goToNext={() => setCurrentStep(2)} />;
     }
@@ -45,7 +39,7 @@ function MultiStepForm() {
               <div
                 className="sidenum"
                 style={{
-                  backgroundColor: currentStep === stepNumber ? 'hsl(228, 100%, 84%)' :'',
+                  backgroundColor: currentStep === stepNumber ? 'hsl(228, 100%, 84%)' : '',
                   color: currentStep === stepNumber ? 'hsl(229, 57%, 11%)' : '',
                 }}
               >
@@ -59,7 +53,10 @@ function MultiStepForm() {
           );
         })}
       </div>
-      {renderStep()}
+
+      <div className="step-content">
+        {renderStep()}
+      </div>
     </div>
   );
 }

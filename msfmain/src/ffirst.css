@@ -153,6 +153,7 @@
     font-family: "Ubuntu", sans-serif;
     font-size: 0.875rem;
     margin-top: 0.25rem;
+    margin-bottom: -20px;
     margin-left: 350px;
     display: block;
   }
@@ -174,7 +175,7 @@
     padding: 10px 20px;
     border: 1px solid transparent;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 370px;
     cursor: pointer;
 }
@@ -206,44 +207,57 @@ and (min-width: 320px)
 and (max-width: 658px)
  {
     .firstpagebody{
-        background-color: white;
-        display: flex;
+        display: block;
+        background:none;
         flex-direction: column;
         justify-content: space-between;
         height: 500px;
         width: 850px;
-        margin:;
+        margin-left: 50px;
+        margin-top: -20px;
         padding: 20px 20px 20px 50px;
-        border-radius: 20px;
         font-family: Arial, sans-serif;
         font-size: 500;
     }
     .sidebar{
-        border: 1px solid hsl(229, 24%, 87%);
-        border-radius: 15px;
-        margin-left: -30px;
-        background-image: ;
+        align-content: center;
+        border: 1px solid transparent;
+        border-radius: 1px;
+        margin-left: -101px;
+        margin-top: -25px;
+    background-image: url('./assets/images/bg-sidebar-mobile.svg');
         background-position: center;
-        background-size: cover;
-        padding: 20px 20px 20px 20px;
-        width: 200px;
-        color:white
+        background-size:contain;
+        padding: 10px 10px 10px 10px;
+        width: 95vw;
+        height: 20vh;
+        color:white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: absolute;
+        z-index: 1;
     }
     .sidebar1{
         display: flex;
-        margin-top: 5px;
+        margin-top: 25px;
+        margin-left: 40px;
     }
     .sidebar2{
         display: flex;
         margin-top: 25px;
+        margin-left: -10px;
     }
     .sidebar3{
         display: flex;
         margin-top: 25px;
+        margin-left: -10px;
     }
     .sidebar4{
         display: flex;
         margin-top: 25px;
+        margin-left: -10px;
+        margin-right: 55px;
     }
     .sidenum{
         font-size: 15px;
@@ -255,6 +269,7 @@ and (max-width: 658px)
          height: 15px;
         width: 15px;
        padding: 7px;
+
     }
     .sidenum:hover{
         border-color:hsl(228, 100%, 84%);
@@ -269,15 +284,19 @@ and (max-width: 658px)
     
     .sidebar1text{
         margin-left: 20px;
+        display:none;
     }
     .sidebar2text{
         margin-left: 20px;
+        display:none;
     }
     .sidebar3text{
         margin-left: 20px;
+        display:none;
     }
     .sidebar4text{
         margin-left: 20px;
+        display:none;
     }
     .stepnum{
         font-family: "Ubuntu", sans-serif;
@@ -295,15 +314,26 @@ and (max-width: 658px)
         margin-top: 3px;
     }
     .Personalinfo{
+        position: absolute;
+        z-index: 1;
       display: block;
-      margin-right: 100px;
-      margin-top: 30px;
+      background-color: white;
+      padding: 20px;
+      margin-top: 70px;
+      margin-left: -80px;
+      font-family: "Ubuntu", sans-serif;
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      width: 75vw;
+      height: 360px;
+
     }
     .pihead{
         font-family: "Ubuntu", sans-serif;
         font-weight: 700;
-        font-size: 30px;
+        font-size: 25px;
         color: hsl(213, 96%, 18%);
+        margin-top: 10px;
     }
     .pip{
         font-family: "Ubuntu", sans-serif;
@@ -314,7 +344,7 @@ and (max-width: 658px)
     }
     
     .forform{
-        margin-top: 50px;
+        margin-top: 20px;
     }
     .formgroup{
         display: flex;
@@ -351,7 +381,9 @@ and (max-width: 658px)
         font-family: "Ubuntu", sans-serif;
         font-size: 0.875rem;
         margin-top: 0.25rem;
-        margin-left: 350px;
+        margin-bottom: -20px;
+        margin-left: 110px;
+        width: 200px;
         display: block;
       }
       
@@ -372,8 +404,9 @@ and (max-width: 658px)
         padding: 10px 20px;
         border: 1px solid transparent;
         border-radius: 5px;
-        margin-top: 20px;
-        margin-left: 370px;
+        margin-top: 70px;
+        margin-left: 140px;
+        width: 120px;
         cursor: pointer;
     }
     .nextstep:hover{
