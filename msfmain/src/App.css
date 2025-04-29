@@ -1,5 +1,6 @@
 .App{
   background-color:  rgb(222, 233, 250);
-  min-height: 200vh;
+  min-height: 100vh;
+max-weight:100vw;
   padding-top:20px;
   }
