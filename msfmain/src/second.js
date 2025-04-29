@@ -42,8 +42,8 @@ function Second({ goBack, goToNext }) {
   <img className='planimg' src={Arcade} alt='arcade' />
   <div className='planbody'>
   <div className='planname'>Arcade</div>
-  <div className='planprice'><span className='price-text'>{pricing.arcade}</span></div></div>
-  {isYearly && <div className='free-label'>2 months free</div>}
+  <div className='planprice'><span className='price-text'>{pricing.arcade}</span></div>
+  {isYearly && <div className='free-label'>2 months free</div>}</div>
 </div>
 
 <div
@@ -57,8 +57,8 @@ function Second({ goBack, goToNext }) {
   <img className='planimg' src={Advanced} alt='advanced' />
   <div className='planbody'>
   <div className='planname'>Advanced</div>
-  <div className='planprice'><span className='price-text'>{pricing.advanced}</span></div></div>
-  {isYearly && <div className='free-label'>2 months free</div>}
+  <div className='planprice'><span className='price-text'>{pricing.advanced}</span></div>
+  {isYearly && <div className='free-label'>2 months free</div>}</div>
 </div>
 
 <div
@@ -72,8 +72,8 @@ function Second({ goBack, goToNext }) {
   <img className='planimg' src={Pro} alt='pro' />
   <div  className='planbody'>
   <div className='planname'>Pro</div>
-  <div className='planprice'><span className='price-text'>{pricing.pro}</span></div></div>
-  {isYearly && <div className='free-label'>2 months free</div>}
+  <div className='planprice'><span className='price-text'>{pricing.pro}</span></div>
+  {isYearly && <div className='free-label'>2 months free</div>}</div>
 </div>
 
         </div>
