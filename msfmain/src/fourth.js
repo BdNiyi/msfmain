@@ -54,7 +54,7 @@ function Fourth({ goBack }) {
           <div className='summaryH'>
             <div className='summaryhead'>
               {selectedPlan?.name} ({isYearly ? "Yearly" : "Monthly"})
-${isYearly ? selectedPlan?.priceYearly : selectedPlan?.priceMonthly}{billingSuffix}
+{/*${isYearly ? selectedPlan?.priceYearly : selectedPlan?.priceMonthly}{billingSuffix}*/}
             </div>
             <div className='summarytext' onClick={goBack}>Change</div>
           </div>
